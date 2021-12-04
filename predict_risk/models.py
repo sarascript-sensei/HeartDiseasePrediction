@@ -29,6 +29,7 @@ class Predictions(models.Model):
     thallium_scan_results = models.IntegerField(choices=thallium_scan_results_choices)
     predicted_on = models.DateTimeField(default=timezone.now)
     num=models.IntegerField()
+    bloodcholesterol=models.IntegerField()
 
     def get_absolute_url(self):
         return reverse('predict:predict', kwargs={'pk': self.profile.pk})
