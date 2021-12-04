@@ -4,19 +4,19 @@ from django.contrib.auth.models import User
 
 class UserForm(forms.ModelForm):
     username = forms.CharField(widget=forms.TextInput(
-        attrs={'class': 'form-control', 'placeholder': 'Enter username'}
+        attrs={'class': 'form-control', 'placeholder': 'Имя'}
     ), required=True, max_length=50)
 
     email = forms.CharField(widget=forms.EmailInput(
-        attrs={'class': 'form-control', 'placeholder': 'Enter Email Id'}
+        attrs={'class': 'form-control', 'placeholder': 'Почта'}
     ), required=True, max_length=50)
 
     password = forms.CharField(widget=forms.PasswordInput(
-        attrs={'class': 'form-control', 'placeholder': 'Enter password'}
+        attrs={'class': 'form-control', 'placeholder': 'Пароль'}
     ), required=True, max_length=50)
 
     confirm_password = forms.CharField(widget=forms.PasswordInput(
-        attrs={'class': 'form-control', 'placeholder': 'Confirm password'}
+        attrs={'class': 'form-control', 'placeholder': 'Подтвердить пароль'}
     ), required=True, max_length=50)
 
     class Meta:
@@ -30,7 +30,7 @@ class UserForm(forms.ModelForm):
 
         if password != confirm_password:
             raise forms.ValidationError(
-                "Password and Confirm password does not match"
+                "Пароли не совпадают"
             )
 
 

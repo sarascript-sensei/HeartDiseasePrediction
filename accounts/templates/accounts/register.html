@@ -21,14 +21,14 @@
                   <div class="collapse navbar-collapse justify-content-end" id="navigation" >
                       <ul class="navbar-nav nav-tabs">
 
-                          <li class="nav-item"><a href="{% url 'about' %}" class="btn btn-neutral">About</a></li>
+                          <li class="nav-item"><a href="{% url 'about' %}" class="btn btn-neutral">О нас</a></li>
 
                           {%if user.is_authenticated%}
-                            <li class="nav-item"><a  href="{% url 'accounts:logout'%}" class="btn btn-neutral">Logout</a></li>
+                            <li class="nav-item"><a  href="{% url 'accounts:logout'%}" class="btn btn-neutral">Выйти</a></li>
                             {%else%}
-                            <li><a href="{% url 'user_login'  %}" class="btn btn-neutral">Login</a></li>
+                            <li><a href="{% url 'user_login'  %}" class="btn btn-neutral">Вход</a></li>
                             {%endif%}
-                            <li class="nav-item"><a href="/admin" class="btn btn-neutral">Admin login</a></li>
+                            <li class="nav-item"><a href="/admin" class="btn btn-neutral">Админ</a></li>
 
                       </ul>
                   </div>
@@ -42,20 +42,20 @@
 
           {% if registered %}
 
-          <h1>Thank you for registering!</h1>
+          <h1>Добро пожаловать!</h1>
 
           {% else %}
 
           <form role="form" enctype="multipart/form-data" method="post">
               {% csrf_token %}
               <div class="card-header text-center form-group">
-							<h3 class="card-title title-up ">Sign Up</h3>
+							<h3 class="card-title title-up ">Регистрация</h3>
 
               {{ user_form}}
               {{ profile_form}}
 
 
-            <button type="submit" class="btn btn-round bg-transparent border">Sign Up</button>
+            <button type="submit" class="btn btn-round bg-transparent border">Зарегистрироваться</button>
           </form>
           {% endif %}
               </div>
