@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>Medical Emergency Form a Responsive Widget Template :: w3layouts</title>
+<title>Предсказание</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,25 +27,25 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation" >
                 <ul class="navbar-nav nav-tabs">
 
-                    <li class="nav-item"><a href="{% url 'accounts:profile' pk=user_id %}" class="btn btn-neutral">Profile</a></li>
-                      <li class="nav-item"><a href="{% url 'accounts:logout' %}" class="btn btn-neutral">Logout</a></li>
+                    <li class="nav-item"><a href="{% url 'accounts:profile' pk=user_id %}" class="btn btn-neutral">Профиль</a></li>
+                      <li class="nav-item"><a href="{% url 'accounts:logout' %}" class="btn btn-neutral">Выйти</a></li>
 
                 </ul>
             </div>
         </div>
     </nav>
-<h1>Predict your Heart disease</h1>
+<h1>Узнайте, есть ли у вас риск сердечных заболеваний</h1>
     <div class="bg-agile">
 	<div class="book-appointment">
-	<h2>Medical Information</h2>
+	<h2>Медицинская справка</h2>
 
   {% if predicted %}
 <div class="card" role="alert">
 <div class="header-main">
 {% if result %}
-<h4 class="table-danger text-center">You have a risk of heart disease</h4>
+<h4 class="table-danger text-center">У вас риск сердечных заболеваний</h4>
 {% else %}
-<h4 class="table-success  text-center">You do not have a risk of heart disease</h4>
+<h4 class="table-success  text-center">У вас нет риска сердечных заболеваний</h4>
 {% endif %}
 </div>
 <div class="card-body">
@@ -53,8 +53,8 @@
                        <table class="table">
                            <thead>
                                <tr>
-                                   <th>Algorithm</th>
-                                   <th>Risk of Heart Disease</th>
+                                   <th>Алгоритм</th>
+                                   <th>Риск сердечных заболеваний</th>
                                </tr>
                            </thead>
                            <tbody>
@@ -87,52 +87,52 @@
         {% csrf_token %}
         <div class="left-agileits-w3layouts same">
           <div class="gaps">
-            <p>Age<p>
+            <p>Возраст<p>
             {{form.age}}
           </div>
 
 					<div class="gaps">
-						<p>Gender</p>
+						<p>Пол</p>
 							{{form.sex}}
 					</div>
 
           <div class="gaps">
-            <p>Chest Pain</p>
+            <p>Боль в груди</p>
               {{form.cp}}
           </div>
 
 					<div class="gaps">
-						<p>Resting BP</p>
+						<p>Кровянное давление</p>
 							{{form.resting_bp}}
 					</div>
 
 					<div class="gaps">
-						<p>Serum Cholestrol</p>
+						<p>Холестерин</p>
 							{{form.serum_cholesterol}}
 					</div>
 
 					<div class="gaps">
-						<p>Fasting Blood Sugar</p>
+						<p>Сахар</p>
 						   {{form.fasting_blood_sugar}}
 					</div>
 
 					<div class="gaps">
-						<p>Resting  Electrocardiographic Result</p>
+						<p>ЭКГ в состоянии покоя</p>
 						{{form.resting_ecg}}
 					</div>
 
 					<div class="gaps">
-						<p>Maximum Heart Rate</p>
+						<p>Максимальная частота сердечных сокращений</p>
 						{{form.max_heart_rate}}
 					</div>
 
 					<div class="gaps">
-						<p>Excercise Induced Angina</p>
+						<p>Стенокардия, вызванная физической нагрузкой</p>
 						{{form.exercise_induced_angina}}
 					</div>
 
 					<div class="gaps">
-						<p>ST Depression</p>
+						<p>Депрессия ST-сегмента</p>
 						{{form.st_depression}}
 					</div>
 
@@ -141,24 +141,24 @@
 				<div class="right-agileinfo same">
 
           <div class="gaps">
-						<p>Slope of the peak exercise ST segment </p>
+						<p>Наклон пикового сегмента ST</p>
 				      {{form.st_slope}}
 					</div>
 
           <div class="gaps">
-            <p>Number of major vessels (0-3) colored by flourosopy</p>
+            <p>Количество крупных сосудов (0-3), окрашенных флуороскопией</p>
               {{form.number_of_vessels}}
           </div>
 
           <div class="gaps">
-            <p>Thalium Scan Results</p>
+            <p>Результаты сканирования Таллия</p>
               {{form.thallium_scan_results}}
           </div>
 
 				</div>
 
 				<div class="clear"></div>
-				<input type="submit" value="Predict" class="btn btn-primary">
+				<input type="submit" value="Прогноз" class="btn btn-primary">
 			</form>
 		</div>
    </div>

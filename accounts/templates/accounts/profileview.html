@@ -21,10 +21,10 @@
 
 
                     <li class="nav-item">
-                        <a href="{% url 'predict:predict' pk=user_id %}" class="btn btn-neutral">Predict</a>
+                        <a href="{% url 'predict:predict' pk=user_id %}" class="btn btn-neutral">Прогнозировать</a>
                     </li>
                     <li class="nav-item">
-                      <a href="{% url 'accounts:logout'%}"  class="btn btn-neutral">Logout</a>
+                      <a href="{% url 'accounts:logout'%}"  class="btn btn-neutral">Выйти</a>
                     </li>
 
                 </ul>
@@ -60,7 +60,7 @@
             </div>
     </div>
     <div class="container">
-    <div class="card-header bg-warning btn-round text-white">Predictions</div>
+    <div class="card-header bg-warning btn-round text-white">Прогнозы</div>
         <hr>
 
 
@@ -68,14 +68,14 @@
             <br>
 
              <div class="card card-login" style="width: 100%">
-                    <div class="card-header bg-dark text-white" style="height: 50px;"> Prediction : {{ pred.num|safe}}
+                    <div class="card-header bg-dark text-white" style="height: 50px;"> Прогнозы : {{ pred.num|safe}}
                     </div>
                     <div class="container">
                         <br>
-                        <p>Age: {{pred.age}}</p>
-                        <p>Sex: {{pred.sex}}</p>
+                        <p>Возраст: {{pred.age}}</p>
+                        <p>Пол: {{pred.sex}}</p>
                     </div>
-                    <div class="card-footer bg-light" >Predicted on {{ pred.predicted_on }}</div>
+                    <div class="card-footer bg-light" >Спрогнозировано {{ pred.predicted_on }}</div>
 
             </div>
             <br>
