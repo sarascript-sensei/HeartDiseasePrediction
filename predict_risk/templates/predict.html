@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>Предсказание</title>
+<title>Inai.KG</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -34,18 +34,18 @@
             </div>
         </div>
     </nav>
-<h1>Узнайте, есть ли у вас риск сердечных заболеваний</h1>
+<h1>Predict your Heart disease</h1>
     <div class="bg-agile">
 	<div class="book-appointment">
-	<h2>Медицинская справка</h2>
+	<h2>Medical Information</h2>
 
   {% if predicted %}
 <div class="card" role="alert">
 <div class="header-main">
 {% if result %}
-<h4 class="table-danger text-center">У вас риск сердечных заболеваний</h4>
+<h4 class="table-danger text-center">У вас риск заболевания сердечными болезнями.Обратитесь к специалисту.</h4>
 {% else %}
-<h4 class="table-success  text-center">У вас нет риска сердечных заболеваний</h4>
+<h4 class="table-success  text-center">У вас нет риска заболевания сердечными заболевания. Так держать!</h4>
 {% endif %}
 </div>
 <div class="card-body">
@@ -54,7 +54,7 @@
                            <thead>
                                <tr>
                                    <th>Алгоритм</th>
-                                   <th>Риск сердечных заболеваний</th>
+                                   <th>Риск заболевания сердечными болезнями (0-отсутствует, 1-риск)</th>
                                </tr>
                            </thead>
                            <tbody>
@@ -97,12 +97,12 @@
 					</div>
 
           <div class="gaps">
-            <p>Боль в груди</p>
+            <p>Грудная боль</p>
               {{form.cp}}
           </div>
 
 					<div class="gaps">
-						<p>Кровянное давление</p>
+						<p>Кровяное давление в состоянии покоя</p>
 							{{form.resting_bp}}
 					</div>
 
@@ -112,27 +112,27 @@
 					</div>
 
 					<div class="gaps">
-						<p>Сахар</p>
+						<p>Уровень сахара в крови натощак</p>
 						   {{form.fasting_blood_sugar}}
 					</div>
 
 					<div class="gaps">
-						<p>ЭКГ в состоянии покоя</p>
+						<p>Результаты экг в покое</p>
 						{{form.resting_ecg}}
 					</div>
 
 					<div class="gaps">
-						<p>Максимальная частота сердечных сокращений</p>
+						<p>Максимальные сердечные сокращения</p>
 						{{form.max_heart_rate}}
 					</div>
 
 					<div class="gaps">
-						<p>Стенокардия, вызванная физической нагрузкой</p>
+						<p>Курение</p>
 						{{form.exercise_induced_angina}}
 					</div>
 
 					<div class="gaps">
-						<p>Депрессия ST-сегмента</p>
+						<p>Деспрессия ST мм</p>
 						{{form.st_depression}}
 					</div>
 
@@ -141,7 +141,7 @@
 				<div class="right-agileinfo same">
 
           <div class="gaps">
-						<p>Наклон пикового сегмента ST</p>
+						<p>Наклон Сегмента ST Пиковой Нагрузки</p>
 				      {{form.st_slope}}
 					</div>
 
@@ -151,7 +151,7 @@
           </div>
 
           <div class="gaps">
-            <p>Результаты сканирования Таллия</p>
+            <p>Сканирование сердца на основе таллия</p>
               {{form.thallium_scan_results}}
           </div>
 

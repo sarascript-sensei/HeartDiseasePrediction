@@ -17,16 +17,16 @@
         <div class="container">
             <div class="navbar-translate">
                 <a class="navbar-brand" >
-                    Heart Disease Analysis &amp; Prediction
+                    Анализ &amp; предсказание сердечных заболеваний
                 </a>
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                       {%if user.is_authenticated %}
-                        <a class="nav-link " href="{% url 'accounts:logout'%}">Logout</a>
+                        <a class="nav-link " href="{% url 'accounts:logout'%}">Выйти</a>
                         {%else%}
-                        <a class="nav-link " href="{% url 'user_login' %}">Login</a>
+                        <a class="nav-link " href="{% url 'user_login' %}">Войти</a>
                         {%endif%}
                     </li>
                 </ul>
@@ -41,10 +41,10 @@
             </div>
             <div class="container">
                 <div class="content-center">
-                    <h1 class="title">Predict your chance of having a heart disease because prevention is better than cure!</h1>
+                    <h1 class="title">Прогнозируйте возможность заболеть сердечными заболеваниями не выходя из дома!</h1>
                     <div class="text-center">
                         <a href="{% url 'accounts:register' %}" class="btn btn-danger border btn-round">
-                            Signup
+                            Регистрация
                         </a>
                     </div>
                 </div>
@@ -56,8 +56,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto text-center">
-                        <h2 class="title">About Us</h2>
-                        <h5 class="description">Loads of features. Making it easier for anyone to predict the chance of getting heart disease. Shows analysis done on large data sets.</h5>
+                        <h2 class="title">О нас</h2>
+                        <h5 class="description">Множество функций. Это облегчает любому человеку прогнозирование вероятности развития сердечных заболеваний. Показывает анализ, выполненный на больших наборах данных.</h5>
                     </div>
                 </div>
                 <div class="separator separator-primary"></div>
@@ -66,10 +66,10 @@
                         <div class="col-md-6">
                             <div class="image-container image-left" style="background-image: url('{% static 'images/1.jpg' %}')">
                                 <!-- First image on the left side -->
-                                <p class="blockquote blockquote-primary">"Doctors can be replaced by software – 80% of them can. I’d much rather have a good machine learning system diagnose my disease than the median or average doctor."
+                                <p class="blockquote blockquote-primary">"Врачей также можно заменить программным обеспечением. Я бы предпочел, чтобы хорошая система машинного обучения диагностировала мою болезнь, чем средний или средний врач".
                                     <br>
                                     <br>
-                                    <small>– Vinod Khosla</small>
+                                    <small>– Каждый кыргызстанец</small>
                                 </p>
                             </div>
                             <!-- Second image on the left side of the article -->
@@ -78,16 +78,17 @@
                         <div class="col-md-5">
                             <!-- First image on the right side, above the article -->
                             <div class="image-container image-right" style="background-image: url('{% static 'images/heart.jpg' %}')"></div>
-                            <h3 style="color:maroon">Vast and Reliable Dataset</h3>
-                            <p> This database contains 76 attributes, but all published experiments refer to using a subset of 14 of them. In particular, the Cleveland database is the only one that has been used by ML researchers to this date.
-                            </p>
+                            <h3 style="color:maroon">Проверенный датасет</h3>
                             <br>
+                            <h3 style="color: maroon">Decision tree</h3>
                             <br>
+                            <h3 style="color: maroon">Naive Bayes</h3>
                             <br>
+                            <h3 style="color: maroon">Support Vector Classifier</h3>
                             <br>
-                              <h3 style="color:maroon">Analysis Using Python and Jupyter Notebook</h3>
-                            <p>The code used for analysis of data and getting prediction rates is pretty simple. The code is written in Python and Jupyter Notebook.
-                            </p>
+                            <h3 style="color: maroon">Logistic Regression</h3>
+                            <br>
+                              <h3 style="color:maroon">Анализ с помощью Python и Anacocnda</h3>
                         </div>
                     </div>
                 </div>
@@ -96,54 +97,32 @@
 
         <div class="section section-team text-center">
             <div class="container">
-                <h2 class="title">Here is our team</h2>
+                <h2 class="title">Наша команда</h2>
                 <div class="team">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <div class="team-player">
-                                <img src="{% static 'images/anirudh.jpg' %}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                                <h4 class="title">Anirudh Dashottar</h4>
-                                <p class="category text-primary">Developer</p>
-                                <p class="description">You can write to us for any suggestions. Your feedback is most Welcome.</p>
+                                <img src="{% static 'images/ataichick.jpg' %}" alt="Thumbnail Image" class="rounded">
+                                <h4 class="title">Атай Боталиев</h4>
+                                <p class="category text-primary">Разработчик</p>
+                                <p class="description">Front-end Java-Script разработчик. Душа компании. Лев по знаку зодиаку </p>
                                 <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-google-plus"></i></a>
                                 <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-instagram"></i></a>
                                 <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-facebook-square"></i></a>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <div class="team-player">
-                                <img src="{% static 'images/mansukh1.jpg' %}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                                <h4 class="title">Mansukh Das</h4>
-                                <p class="category text-primary">Developer</p>
-                                <p class="description">You can write to us for any suggestions. Your feedback is most Welcome.</p>
-                                <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-google-plus"></i></a>
-                                <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-instagram"></i></a>
-                                <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-facebook-square"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="team-player">
-                                <img src="{% static 'images/deepanshi.jpg' %}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                                <h4 class="title">Deepanshi chauhan</h4>
-                                <p class="category text-primary">Developer</p>
-                                <p class="description">You can write to us for any suggestions. Your feedback is most Welcome.</p>
+                                <img src="{% static 'images/sara.jpg' %}" alt="Thumbnail Image" class="rounded">
+                                <h4 class="title">Сара Ниязахунова</h4>
+                                <p class="category text-primary">Разработчик</p>
+                                <p class="description">Front-end Flutter разработчик. Любит авокадо. Также лев.</p>
                                 <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-google-plus"></i></a>
                                 <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-instagram"></i></a>
                                 <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-facebook-square"></i></a>
                             </div>
                         </div>
 
-                        <div class="col-md-3">
-                            <div class="team-player">
-                                <img src="{% static 'images/mansi1.jpg' %}" alt="Thumbnail Image" class="rounded-circle img-fluid  img-raised">
-                                <h4 class="title">Mansi Agrawal</h4>
-                                <p class="category text-primary">Developer</p>
-                                <p class="description">You can write to us for any suggestions. Your feedback is most Welcome.</p>
-                                <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-google-plus"></i></a>
-                                <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-github"></i></a>
-                                <a href="#" class="btn btn-primary btn-icon btn-round"><i class="fa fa-facebook-square"></i></a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -155,8 +134,7 @@
 
                 </nav>
                 <div class="copyright">
-                   &copy; 2018,
-                   Coded by Anirudh,Mansi,Deepanshi and Mansukh
+                   &copy; 2021
                 </div>
             </div>
         </footer>

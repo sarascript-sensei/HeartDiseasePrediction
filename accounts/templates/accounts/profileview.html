@@ -66,14 +66,13 @@
 
         {% for pred in userprofileinfo.predict.all  %}
             <br>
-
              <div class="card card-login" style="width: 100%">
-                    <div class="card-header bg-dark text-white" style="height: 50px;"> Прогнозы : {{ pred.num|safe}}
+                    <div class="card-header bg-dark text-white" style="height: 50px;"> Прогнозы : {{ pred.num|safe}} (1-риск, 0-отсутствует)
                     </div>
                     <div class="container">
                         <br>
                         <p>Возраст: {{pred.age}}</p>
-                        <p>Пол: {{pred.sex}}</p>
+                        <p>Пол: {{pred.sex}} (1-мужской, 0-женский)</p>
                     </div>
                     <div class="card-footer bg-light" >Спрогнозировано {{ pred.predicted_on }}</div>
 

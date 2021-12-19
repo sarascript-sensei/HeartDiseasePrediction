@@ -3,11 +3,20 @@ from accounts.models import UserProfileInfo
 from django.utils import timezone
 from django.urls import reverse
 # Create your models here.
+#sex_choices=((0, 'Женский'),(1, 'Мужской'))
+#cp_choice=((0,'None'),(1, 'Typical Angina'),(2, 'Atypical Angina'),(3, 'Non-Angina'),(4, 'Asymptomatic'))
+#fasting_blood_sugar_choices=((1,'> 120 mg/dl'),((0,'< 120 mg/dl')))
+#resting_ecg_choices=((0, 'Normal'),(1, 'Having ST-T wave abnormality'),(2, 'hypertrophy'))
+#exercise_induced_angina_choices=((0, 'No'),(1, 'Yes'))
+#st_slope_choices=((1, 'Upsloping'),(2, 'Flat'),(3, 'Down Sloping'))
+#number_of_vessels_choices=((0, 'None'),(1, 'One'),(2, 'Two'),(3, 'Three'))
+#thallium_scan_results_choices=((3, 'Normal'),(6, 'Fixed Defect'),(7, 'Reversible Defect'))
+
 sex_choices=((0, 'Женский'),(1, 'Мужской'))
 cp_choice=((0,'Нет'),(1, 'Типичная стенокардия'),(2, 'Атипичная стенокардия'),(3, 'Отсутсвие стенокардии'),(4, 'Отсутсвие симптомов'))
 fasting_blood_sugar_choices=((1,'> 120 мг/дл'),((0,'< 120 мг/дл')))
 resting_ecg_choices=((0, 'Норма'),(1, 'Наличие аномалии зубца ST-T'),(2, 'Гипертрофия'))
-exercise_induced_angina_choices=((0, 'No'),(1, 'Yes'))
+exercise_induced_angina_choices=((0, 'Нет'),(1, 'Да'))
 st_slope_choices=((1, 'Нарастающий'),(2, 'Ровный'),(3, 'Понижающий'))
 number_of_vessels_choices=((0, 'Нет'),(1, 'Один'),(2, 'Два'),(3, 'Три'))
 thallium_scan_results_choices=((3, 'Норма'),(6, 'Исправлен дефект'),(7, 'Обратимый дефект'))
