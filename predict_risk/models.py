@@ -2,15 +2,7 @@ from django.db import models
 from accounts.models import UserProfileInfo
 from django.utils import timezone
 from django.urls import reverse
-# Create your models here.
-#sex_choices=((0, 'Женский'),(1, 'Мужской'))
-#cp_choice=((0,'None'),(1, 'Typical Angina'),(2, 'Atypical Angina'),(3, 'Non-Angina'),(4, 'Asymptomatic'))
-#fasting_blood_sugar_choices=((1,'> 120 mg/dl'),((0,'< 120 mg/dl')))
-#resting_ecg_choices=((0, 'Normal'),(1, 'Having ST-T wave abnormality'),(2, 'hypertrophy'))
-#exercise_induced_angina_choices=((0, 'No'),(1, 'Yes'))
-#st_slope_choices=((1, 'Upsloping'),(2, 'Flat'),(3, 'Down Sloping'))
-#number_of_vessels_choices=((0, 'None'),(1, 'One'),(2, 'Two'),(3, 'Three'))
-#thallium_scan_results_choices=((3, 'Normal'),(6, 'Fixed Defect'),(7, 'Reversible Defect'))
+
 
 sex_choices=((0, 'Женский'),(1, 'Мужской'))
 cp_choice=((0,'Нет'),(1, 'Типичная стенокардия'),(2, 'Атипичная стенокардия'),(3, 'Отсутсвие стенокардии'),(4, 'Отсутсвие симптомов'))

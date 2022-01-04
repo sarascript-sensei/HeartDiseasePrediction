@@ -30,7 +30,7 @@ def PredictRisk(request,pk):
             SVCClassifier,LogisticRegressionClassifier,NaiveBayesClassifier,DecisionTreeClassifier=GetAllClassifiersForHeart()
 
 
-            predictions = {'SVC': str(SVCClassifier.predict(features)[0]),
+            predictions = {'SVC': str(SVCClassifier.predict_proba(features)[0]),
             'LogisticRegression': str(LogisticRegressionClassifier.predict(features)[0]),
              'NaiveBayes': str(NaiveBayesClassifier.predict(features)[0]),
              'DecisionTree': str(DecisionTreeClassifier.predict(features)[0]),
