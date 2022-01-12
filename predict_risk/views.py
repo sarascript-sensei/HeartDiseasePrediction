@@ -30,15 +30,15 @@ def PredictRisk(request,pk):
             SVCClassifier,LogisticRegressionClassifier,NaiveBayesClassifier,DecisionTreeClassifier=GetAllClassifiersForHeart()
 
 
-            predictions = {'SVC': str(SVCClassifier.predict_proba(features)[0]),
-            'LogisticRegression': str(LogisticRegressionClassifier.predict(features)[0]),
-             'NaiveBayes': str(NaiveBayesClassifier.predict(features)[0]),
-             'DecisionTree': str(DecisionTreeClassifier.predict(features)[0]),
+            predictions = {
+            'LogisticRegression': str(LogisticRegressionClassifier.predict_proba(features)[0]),
+             'NaiveBayes': str(NaiveBayesClassifier.predict_proba(features)[0]),
+             'DecisionTree': str(DecisionTreeClassifier.predict_proba(features)[0])[4] +  str(DecisionTreeClassifier.predict_proba(features)[0])[4],
               }
             pred = form.save(commit=False)
 
-            l=[predictions['SVC'],predictions['LogisticRegression'],predictions['NaiveBayes'],predictions['DecisionTree']]
-            count=l.count('1')
+            l=[predictions['LogisticRegression'],predictions['NaiveBayes'],predictions['DecisionTree']]
+            count=l.count('100')
 
             result=False
 
@@ -54,11 +54,6 @@ def PredictRisk(request,pk):
             predicted = True
 
             colors={}
-
-            if predictions['SVC']=='0':
-                colors['SVC']="table-success"
-            elif predictions['SVC']=='1':
-                colors['SVC']="table-danger"
 
             if predictions['LogisticRegression']=='0':
                 colors['LR']="table-success"

@@ -122,7 +122,7 @@ print(classification_report(Y_test, y_Class_pred))
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import roc_curve
 logit_roc_auc = roc_auc_score(Y_test, classifier.predict(X_test))
-fpr, tpr, thresholds = roc_curve(Y_test, classifier.predict_proba(X_test)[:,1])
+fpr, tpr, thresholds = roc_curve(Y_test, classifier.predict_proba(X_test)[:, 1])
 plt.figure()
 plt.plot(fpr, tpr, label='Logistic Regression (area = %0.2f)' % logit_roc_auc)
 plt.plot([0, 1], [0, 1],'r--')
