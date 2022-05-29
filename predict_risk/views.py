@@ -31,9 +31,9 @@ def PredictRisk(request,pk):
 
 
             predictions = {
-            'LogisticRegression': str(LogisticRegressionClassifier.predict_proba(features)[0]),
-             'NaiveBayes': str(NaiveBayesClassifier.predict_proba(features)[0]),
-             'DecisionTree': str(DecisionTreeClassifier.predict_proba(features)[0])[4] +  str(DecisionTreeClassifier.predict_proba(features)[0])[4],
+            'LogisticRegression': str(LogisticRegressionClassifier.predict(features)[0]),
+             'NaiveBayes': str(NaiveBayesClassifier.predict(features)[0]),
+             'DecisionTree': str(DecisionTreeClassifier.predict(features)[0])
               }
             pred = form.save(commit=False)
 
